@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-private struct OffsetPreferenceKey: PreferenceKey {
+struct OffsetPreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = .zero
-    
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {}
 }
 
-struct ScrollViewOffsetReader<Content: View>: View {
+struct EndDetectionScrollView<Content: View>: View {
     let axis: Axis.Set
     let showIndicators: Bool
     @Binding var hasScrolledToEnd: Bool
@@ -36,7 +35,6 @@ struct ScrollViewOffsetReader<Content: View>: View {
         ScrollView(axis, showsIndicators: showIndicators) {
             offsetReader
             content()
-                .padding(.top, -8)
                 .overlay(content:  {
                     GeometryReader(content: { geometry in
                         Color.clear.onAppear {
@@ -50,12 +48,16 @@ struct ScrollViewOffsetReader<Content: View>: View {
             GeometryReader(content: { geometry in
                 Color.clear.onAppear {
                     self.visibleContentHeight = geometry.frame(in: .global).height
-//                    hasScrolledToEnd = false
                 }
             })
         })
         .coordinateSpace(name: "frameLayer")
         .onPreferenceChange(OffsetPreferenceKey.self, perform: { offset in
+            if totalContentHeight < visibleContentHeight {
+                hasScrolledToEnd = false
+                return
+            }
+            print("Total \(totalContentHeight) visible: \(visibleContentHeight)")
             if totalContentHeight != 0 && visibleContentHeight != 0 {
                 if (totalContentHeight - visibleContentHeight) + offset <= 0 {
                     hasScrolledToEnd = true

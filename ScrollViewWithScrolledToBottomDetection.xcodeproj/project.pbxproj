@@ -10,8 +10,8 @@
 		04B794E12B18E3E600E650B1 /* ScrollViewWithScrolledToBottomDetectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B794E02B18E3E600E650B1 /* ScrollViewWithScrolledToBottomDetectionApp.swift */; };
 		04B794E52B18E3E700E650B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B794E42B18E3E700E650B1 /* Assets.xcassets */; };
 		04B794E82B18E3E700E650B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B794E72B18E3E700E650B1 /* Preview Assets.xcassets */; };
-		04B794F02B18E3F800E650B1 /* ScrollViewWithBottomShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B794EE2B18E3F800E650B1 /* ScrollViewWithBottomShadow.swift */; };
-		04B794F12B18E3F800E650B1 /* ScrollViewOffsetReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B794EF2B18E3F800E650B1 /* ScrollViewOffsetReader.swift */; };
+		04B794F02B18E3F800E650B1 /* ScrollViewWithScrollToBottomDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B794EE2B18E3F800E650B1 /* ScrollViewWithScrollToBottomDetectionView.swift */; };
+		04B794F12B18E3F800E650B1 /* EndDetectionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B794EF2B18E3F800E650B1 /* EndDetectionScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +19,8 @@
 		04B794E02B18E3E600E650B1 /* ScrollViewWithScrolledToBottomDetectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithScrolledToBottomDetectionApp.swift; sourceTree = "<group>"; };
 		04B794E42B18E3E700E650B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B794E72B18E3E700E650B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		04B794EE2B18E3F800E650B1 /* ScrollViewWithBottomShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewWithBottomShadow.swift; sourceTree = "<group>"; };
-		04B794EF2B18E3F800E650B1 /* ScrollViewOffsetReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetReader.swift; sourceTree = "<group>"; };
+		04B794EE2B18E3F800E650B1 /* ScrollViewWithScrollToBottomDetectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewWithScrollToBottomDetectionView.swift; sourceTree = "<group>"; };
+		04B794EF2B18E3F800E650B1 /* EndDetectionScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndDetectionScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				04B794E02B18E3E600E650B1 /* ScrollViewWithScrolledToBottomDetectionApp.swift */,
-				04B794EF2B18E3F800E650B1 /* ScrollViewOffsetReader.swift */,
-				04B794EE2B18E3F800E650B1 /* ScrollViewWithBottomShadow.swift */,
+				04B794EF2B18E3F800E650B1 /* EndDetectionScrollView.swift */,
+				04B794EE2B18E3F800E650B1 /* ScrollViewWithScrollToBottomDetectionView.swift */,
 				04B794E42B18E3E700E650B1 /* Assets.xcassets */,
 				04B794E62B18E3E700E650B1 /* Preview Content */,
 			);
@@ -140,9 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B794F02B18E3F800E650B1 /* ScrollViewWithBottomShadow.swift in Sources */,
+				04B794F02B18E3F800E650B1 /* ScrollViewWithScrollToBottomDetectionView.swift in Sources */,
 				04B794E12B18E3E600E650B1 /* ScrollViewWithScrolledToBottomDetectionApp.swift in Sources */,
-				04B794F12B18E3F800E650B1 /* ScrollViewOffsetReader.swift in Sources */,
+				04B794F12B18E3F800E650B1 /* EndDetectionScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

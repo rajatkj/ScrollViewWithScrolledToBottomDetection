@@ -11,7 +11,7 @@ import SwiftUI
 struct ScrollViewWithScrolledToBottomDetectionApp: App {
     var body: some Scene {
         WindowGroup {
-            ScrollViewWithBottomShadow()
+            ScrollViewWithScrollToBottomDetectionView()
         }
     }
 }
